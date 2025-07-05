@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap | Silent Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Common header and footer-->
+    <script>
+        $(document).ready(function(){
+            $('header').load("../pages/header.html");
+            $('footer').load("../pages/footer.html");
+        })
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="clearfix">
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="padding: 2rem 0;">
+        <h1>Website Sitemap</h1>
+        
+        <div class="sitemap-container">
+            <ul class="sitemap-list">
+                <li>
+                    <a href="../index.html">Home</a>
+                    <ul class="sitemap-sublist">
+                        <li><a href="../index.html#featured-books">Featured Books</a></li>
+                        <li><a href="../index.html#upcoming-events">Upcoming Events</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="../pages/books-list.html">Books</a>
+                    <ul class="sitemap-sublist">
+                        <li><a href="../pages/book-details-TheSilentPatient.html">The Silent Patient</a></li>
+                        <li><a href="../pages/book-details-QuietThePowerOfIntroverts.html">Quiet: The Power of Introverts</a></li>
+                        <li><a href="../pages/book-details-TheLibraryBook.html">The Library Book</a></li>
+                        <li><a href="../pages/books-list.html">View All Books</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="../pages/events.html">Events & Promotions</a>
+                    <ul class="sitemap-sublist">
+                        <li><a href="../pages/events.html#upcoming-events">Upcoming Events</a></li>
+                        <li><a href="../pages/events.html#current-promotions">Current Promotions</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="../pages/contact.html">Contact Us</a>
+                    <ul class="sitemap-sublist">
+                        <li><a href="../pages/contact.html#location">Location & Hours</a></li>
+                        <li><a href="../pages/contact.html#contact-form">Contact Form</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="../pages/privacy-policy.html">Privacy Policy</a>
+                </li>
+                
+                <li>
+                    <a href="../pages/sitemap.html">Sitemap</a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Responsive adjustments
+        function handleResize() {
+            if (window.innerWidth > 768) {
+                nav.style.display = 'flex';
+            } else {
+                nav.style.display = 'none';
+            }
+        }
+        
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initialize
+    </script>
+</body>
+</html>

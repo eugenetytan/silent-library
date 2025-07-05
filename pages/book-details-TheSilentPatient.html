@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Silent Patient | Silent Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Common header and footer-->
+    <script>
+        $(document).ready(function(){
+            $('header').load("../pages/header.html");
+            $('footer').load("../pages/footer.html");
+        })
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="clearfix">
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="padding: 2rem 0;">
+        <div class="book-detail">
+            <div class="book-cover">
+                <img src="../images/Book-TheSilentPatient.jpg" alt="The Silent Patient">
+            </div>
+            
+            <div class="book-content">
+                <h1>The Silent Patient</h1>
+                
+                <div class="book-meta">
+                    <p><span>Author:</span> Alex Michaelides</p>
+                    <p><span>Genre:</span> Psychological Thriller</p>
+                    <p><span>Published:</span> February 5, 2019</p>
+                    <p><span>Publisher:</span> Celadon Books</p>
+                    <p><span>ISBN:</span> 978-1250301697</p>
+                    <p><span>Pages:</span> 336</p>
+                    <p><span>Status:</span> <span class="book-status available">Available</span></p>
+                </div>
+                
+                <h3>Synopsis</h3>
+                <p>Alicia Berenson's life is seemingly perfect. A famous painter married to an in-demand fashion photographer, she lives in a grand house with big windows overlooking a park in one of London's most desirable areas. One evening her husband Gabriel returns home late from a fashion shoot, and Alicia shoots him five times in the face, and then never speaks another word.</p>
+                
+                <p>Alicia's refusal to talk, or give any kind of explanation, turns a domestic tragedy into something far grander, a mystery that captures the public imagination and casts Alicia into notoriety. The price of her art skyrockets, and she, the silent patient, is hidden away from the tabloids and spotlight at the Grove, a secure forensic unit in North London.</p>
+                
+                <p>Theo Faber is a criminal psychotherapist who has waited a long time for the opportunity to work with Alicia. His determination to get her to talk and unravel the mystery of why she shot her husband takes him down a twisting path into his own motivations—a search for the truth that threatens to consume him...</p>
+                
+                <div class="book-actions">
+                    <a href="#" class="btn"><i class="fas fa-bookmark"></i> Reserve</a>
+                    <a href="#" class="btn"><i class="fas fa-share-alt"></i> Share</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Author Bio -->
+        <div class="privacy-section" style="margin-top: 3rem;">
+            <h2>About the Author</h2>
+            <div style="display: flex; gap: 2rem; align-items: center; margin-top: 1rem;">
+                <img src="../images/Author-AlexMichaelides.jpg" alt="Alex Michaelides" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                <div>
+                    <h3>Alex Michaelides</h3>
+                    <p>Alex Michaelides was born in Cyprus to a Greek-Cypriot father and English mother. He studied English literature at Cambridge University and got his MA in screenwriting at the American Film Institute in Los Angeles. He wrote the film The Devil You Know (2013) starring Rosamund Pike and co-wrote The Con is On (2018), starring Uma Thurman and Tim Roth. The Silent Patient is his first novel.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Related Books -->
+        <div class="related-books">
+            <h2>You May Also Like</h2>
+            <div class="featured-books" style="margin-top: 1rem;">
+                <div class="book-card">
+                    <img src="../images/Book-TheSilentCompanions.jpg" alt="The Silent Companions">
+                    <div class="book-info">
+                        <h3>The Silent Companions</h3>
+                        <p>Laura Purcell</p>
+                        <p>Gothic Horror</p>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <img src="../images/Book-TheWomanInTheWindow.jpg" alt="The Woman in the Window">
+                    <div class="book-info">
+                        <h3>The Woman in the Window</h3>
+                        <p>A.J. Finn</p>
+                        <p>Psychological Thriller</p>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <img src="../images/Book-GoneGirl.jpg" alt="Gone Girl">
+                    <div class="book-info">
+                        <h3>Gone Girl</h3>
+                        <p>Gillian Flynn</p>
+                        <p>Psychological Thriller</p>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Responsive adjustments
+        function handleResize() {
+            if (window.innerWidth > 768) {
+                nav.style.display = 'flex';
+            } else {
+                nav.style.display = 'none';
+            }
+        }
+        
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initialize
+    </script>
+</body>
+</html>
