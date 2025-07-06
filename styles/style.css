@@ -44,8 +44,7 @@ a:hover {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    /* background-color: var(--accent-color); */
-    background-color: #5DAE8B; /* Your muted teal color */
+    background-color: var(--accent-color);
     color: white;
     border: none;
     border-radius: 4px;
@@ -65,6 +64,25 @@ a:hover {
 
 .btn-highlight:hover {
     background-color: #d9b10e;
+}
+
+.book-info .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+}
+
+.event-details .btn {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    border: none;
+}
+
+.event-details .btn:hover {
+    background-color: #4d8c72 !important;
 }
 
 /* Header Styles */
@@ -213,23 +231,95 @@ footer {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/library-hero.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/silent-library/images/Hero-Library.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
     color: white;
     padding: 5rem 0;
     text-align: center;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.hero .btn:hover {
+    background-color: #4d8c72;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero {
+        height: 240px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 200px;
+        padding: 3rem 0;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 180px;
+        padding: 2rem 0;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
 }
 
 /* Featured Sections */
@@ -420,6 +510,26 @@ footer {
     margin-top: 0.5rem;
 }
 
+.book-info .btn:hover {
+    background-color: #4d8c72;
+    color: white;
+}
+
+.book-list-info .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-list-info .btn:hover {
+    background-color: #4d8c72;
+    color: white;
+}
 .available {
     background-color: #d4edda;
     color: #155724;
@@ -493,6 +603,24 @@ footer {
     margin-top: 1.5rem;
 }
 
+.book-actions .btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.book-actions .btn:hover {
+    background-color: #4d8c72;
+    color: white;
+}
+
 .related-books {
     margin-top: 3rem;
 }
@@ -528,11 +656,21 @@ footer {
     margin-top: 3px;
 }
 
+.right-column {
+    grid-column: 2;
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+}
+
 .contact-map {
     height: 300px;
-    background-color: #eee;
-    border-radius: 8px;
-    overflow: hidden;
+    min-height: auto; /* Remove min-height if it was forcing extra space */
+}
+
+.contact-info-section {
+    /* Existing styles remain */
+    margin-top: 0; /* Ensure no extra margin */
 }
 
 .contact-form {
