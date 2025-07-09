@@ -3,6 +3,7 @@
     --primary-color: #2C3E50;
     --secondary-color: #F8F9FA;
     --accent-color: #77b099;
+    --accent-back-color: #4d8c72;
     --highlight-color: #F1C40F;
     --border-color: #BDC3C7;
 }
@@ -53,17 +54,8 @@ a:hover {
 }
 
 .btn:hover {
-    background-color: #4d8c72;
-    color: white;
-}
-
-.btn-highlight {
-    background-color: var(--highlight-color);
-    color: #333;
-}
-
-.btn-highlight:hover {
-    background-color: #d9b10e;
+    background-color: var(--accent-back-color);
+    color: var(--highlight-color);
 }
 
 .book-info .btn {
@@ -75,14 +67,20 @@ a:hover {
     border: none;
 }
 
+.book-info .btn:hover {
+    background-color: var(--accent-back-color);
+    color: var(--highlight-color); /* Changed from white */
+}
+
 .event-details .btn {
-    background-color: var(--accent-color) !important;
-    color: white !important;
+    background-color: var(--accent-color);
+    color: white;
     border: none;
 }
 
 .event-details .btn:hover {
-    background-color: #4d8c72 !important;
+    background-color: var(--accent-back-color);
+    color: var(--highlight-color); /* Changed from white */
 }
 
 /* Header Styles */
@@ -164,7 +162,8 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    transform: scale(1.05); /* Slight grow effect on hover */
+    transform: scale(1.05);
+    color: var(--highlight-color)
 }
 
 .search-bar {
@@ -318,7 +317,8 @@ footer {
 }
 
 .hero .btn:hover {
-    background-color: #4d8c72;
+    background-color: var(--accent-back-color);
+    color: var(--highlight-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -442,14 +442,22 @@ footer {
 }
 
 .book-info h3 {
+    font-size: 1.3rem;  /* Increased from 1.1rem */
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    font-weight: 700;   /* Makes the title bolder */
 }
 
 .book-info p {
     color: #666;
-    font-size: 0.9rem;
+    font-size: 1rem;    /* Increased from 0.9rem */
     margin-bottom: 0.5rem;
+    line-height: 1.5;   /* Better spacing between lines */
+}
+
+/* Add more emphasis to the author's name */
+.book-info p:first-of-type {
+    font-weight: 600;
+    color: #555;        /* Slightly darker than other text */
 }
 
 .book-info .btn {
@@ -542,6 +550,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    padding: 1.5rem; /* Increased padding for better spacing */
 }
 
 .book-list-item {
@@ -563,14 +572,18 @@ footer {
 }
 
 .book-list-info h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.4rem; /* Increased from default */
+    margin-bottom: 0.5rem;
+    font-weight: 700; /* Make titles bolder */
+    color: var(--primary-color);
 }
 
 .book-list-info p {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
+        font-size: 1.1rem; /* Increased from 0.9rem */
+    margin-bottom: 0.5rem;
+    line-height: 1.5; /* Better line spacing */
+    /* font-weight: 600; */
+    color: #555; /* Slightly darker than other text */
 }
 
 .book-status {
@@ -582,8 +595,8 @@ footer {
 }
 
 .book-info .btn:hover {
-    background-color: #4d8c72;
-    color: white;
+    background-color: var(--accent-back-color);
+    color: var(--highlight-color);
 }
 
 .book-list-info .btn {
@@ -598,9 +611,10 @@ footer {
 }
 
 .book-list-info .btn:hover {
-    background-color: #4d8c72;
-    color: white;
+    background-color: var(--accent-back-color);
+    color: var(--highlight-color);
 }
+
 .available {
     background-color: #d4edda;
     color: #155724;
@@ -644,7 +658,7 @@ footer {
     padding: 2rem;
     display: grid;
     grid-template-columns: 300px 1fr;
-    gap: 2rem;
+    gap: 3rem; /* Increase gap between cover and content */
 }
 
 .book-cover img {
@@ -655,23 +669,72 @@ footer {
 }
 
 .book-meta {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem; /* More space after meta */
 }
 
 .book-meta p {
-    margin-bottom: 0.5rem;
-    color: #666;
+    font-size: 1.2rem; /* Increased from default */
+    margin-bottom: 0.75rem;
+    color: #555;
 }
 
-.book-meta span {
+.book-meta span:first-child {
     font-weight: 600;
     color: #333;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.book-content h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    color: var(--primary-color);
+}
+
+.book-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+.book-content h3 {
+    font-size: 1.5rem;
+    margin: 1.8rem 0 1rem;
+    color: var(--primary-color);
+}
+
+.book-content ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.6;
+}
+
+/* Author Bio Section */
+.privacy-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Related Books Section */
+.related-books h2 {
+    font-size: 1.8rem;
+    margin: 3rem 0 1.5rem;
 }
 
 .book-actions {
     display: flex;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
 }
 
 .book-actions .btn {
@@ -688,7 +751,7 @@ footer {
 }
 
 .book-actions .btn:hover {
-    background-color: #4d8c72;
+    background-color: var(--accent-back-color);
     color: white;
 }
 
