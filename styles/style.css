@@ -219,7 +219,7 @@ footer {
 .footer-section h3 {
     color: white;
     margin-bottom: 0.75rem; /* Reduced from 1rem */
-    font-size: 1.1rem; /* Slightly smaller */
+    font-size: 1.2rem; /* Slightly smaller */
 }
 
 .footer-section ul {
@@ -261,12 +261,13 @@ footer {
     margin-top: 1rem; /* Reduced from 2rem */
     padding-top: 0.75rem; /* Reduced from 1rem */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.8rem; /* Slightly smaller */
+    font-size: 0.9rem; /* Slightly smaller */
     color: #ddd;
 }
 
 /* Hero Section */
 .hero {
+    /* Remove or comment out the background-image property for lazy loading */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/silent-library/images/Hero-Library.jpg');
     background-size: cover;
     background-position: center center;
@@ -752,7 +753,7 @@ footer {
 
 .book-actions .btn:hover {
     background-color: var(--accent-back-color);
-    color: white;
+    color: var(--highlight-color);
 }
 
 .related-books {
